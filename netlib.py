@@ -96,8 +96,14 @@ def getUnixInterfaceDialog():
     ifaces = netifaces.interfaces()
     for iface in ifaces:
         addr = netifaces.ifaddresses(iface)
-        IpAddress = addr[netifaces.AF_INET][0]['addr']
-        macAddress = addr[netifaces.AF_LINK][0]['addr']
+        try:
+            IpAddress = addr[netifaces.AF_INET][0]['addr']
+        except:
+            IpAddress = '0.0.0.0'
+        try:
+            macAddress = addr[netifaces.AF_LINK][0]['addr']
+        except:
+            macAddress = 'FF:FF:FF:FF:FF:FF'
         allInterfaces.append({'name': iface, 'mac': macAddress, 'ips': ['none', IpAddress]})
     
     numberOfInterfaces = len(allInterfaces)
