@@ -48,7 +48,7 @@ def arpScan(selectedInterface):
     while(1):
         os.system('cls' if os.name == 'nt' else 'clear')
         printTitle("ARP Scan")
-        print("")
+        print(fg.li_yellow + "Press e to exit\n" + fg.rs)
         lastResult = ""
 
         networkSubnetMask = getNetworkSubnetMask(selectedInterface['ips'][1])
