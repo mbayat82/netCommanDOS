@@ -62,7 +62,7 @@ def getWinInterfaceDialog():
                 pass
         print(netIfacesTable.get_string(title="Network Interfaces"))
 
-        print(fg.li_yellow + "Press e to exist\n" + fg.rs)
+        print(fg.li_yellow + "Press e to exit\n" + fg.rs)
 
         #Select an interface loop
         while (1):
@@ -118,7 +118,7 @@ def getUnixInterfaceDialog():
         netIfacesTable.add_row([interfaceIndex,interfaceInfo['name'],interfaceInfo['mac'],interfaceInfo['ips'][1]])
     print(netIfacesTable.get_string(title="Network Interfaces"))
 
-    print(fg.li_yellow + "Press e to exist\n" + fg.rs)
+    print(fg.li_yellow + "Press e to exit\n" + fg.rs)
 
     #Select an interface loop
     while (1):

@@ -41,7 +41,7 @@ def getTaskDialog():
     taskTable.add_row(['8','Send CFM'])
 
     print(taskTable)
-    print (fg.li_yellow + "Press e to exist\n" + fg.rs)
+    print (fg.li_yellow + "Press e to exit\n" + fg.rs)
 
     while(1):
         
@@ -74,7 +74,7 @@ def sendUDP(selectedInterface):
 
     while(1):
         printTitle("Send UDP Packets")
-        print(fg.li_yellow + "Press e to exist\n" + fg.rs)
+        print(fg.li_yellow + "Press e to exit\n" + fg.rs)
 
         #get parameters
         sourceMAC, rsm = getSourceMAC(selectedInterface)
@@ -126,7 +126,7 @@ def sendIGMP(selectedInterface):
     
     while(1):
         printTitle("Send IGMP Packets")
-        print(fg.li_yellow + "Press e to exist\n" + fg.rs)
+        print(fg.li_yellow + "Press e to exit\n" + fg.rs)
         #get parameters
         igmpMulticastIP= getMulticastIP(selectedInterface)
         if igmpMulticastIP == 'e':
@@ -176,7 +176,7 @@ def fastARPscan(selectedInterface):
     while(1):
         os.system('cls' if os.name == 'nt' else 'clear')
         printTitle("Fast ARP Scan")
-        print(fg.li_yellow + "Press e to exist\n" + fg.rs)
+        print(fg.li_yellow + "Press e to exit\n" + fg.rs)
 
         networkSubnetMask = getNetworkSubnetMask(selectedInterface['ips'][1])
         if networkSubnetMask == "e":

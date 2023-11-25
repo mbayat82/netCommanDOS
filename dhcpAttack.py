@@ -32,7 +32,7 @@ def dhcpAttack(selectedInterface):
 
         os.system('cls' if os.name == 'nt' else 'clear')
         printTitle("DHCP Attack")
-        print(fg.li_yellow + "Press e to exist\n" + fg.rs)
+        print(fg.li_yellow + "Press e to exit\n" + fg.rs)
 
         sourceMAC, rsm = getSourceMAC(selectedInterface)
         if sourceMAC == "e":
