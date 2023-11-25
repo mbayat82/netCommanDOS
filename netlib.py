@@ -5,7 +5,8 @@ try:
     import netaddr, netifaces
     import scapy.contrib.igmp as sigmp
     from scapy.all import *
-    from scapy.arch.windows import get_windows_if_list
+    if (os.name == 'nt'):
+        from scapy.arch.windows import get_windows_if_list
     from prettytable import PrettyTable
     from sty import fg, bg, ef, rs
     import keyboard
